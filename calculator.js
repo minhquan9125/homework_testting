@@ -8,7 +8,9 @@ document.getElementById("btnGiai").addEventListener("click", function() {
         output.innerHTML = "Vui lòng nhập đủ a, b, c!";
         return;
     }
+
     if (a === 0) {
+        
         if (b === 0) {
             if (c === 0) {
                 output.innerHTML = "Phương trình có vô số nghiệm";
@@ -16,11 +18,12 @@ document.getElementById("btnGiai").addEventListener("click", function() {
                 output.innerHTML = "Phương trình vô nghiệm";
             }
         } else {
-            let x = -c / b;
+            var x = -c / b;
             output.innerHTML = "Phương trình bậc 1, có 1 nghiệm: x = " + x;
         }
         return;
     }
+
     var delta = b * b - 4 * a * c;
     if (delta < 0) {
         output.innerHTML = "Phương trình vô nghiệm";
